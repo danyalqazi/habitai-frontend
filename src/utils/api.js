@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: process.env.REACT_APP_API_URL || "http://localhost:5000/api",
 });
 
 API.interceptors.request.use((req) => {
@@ -22,8 +22,6 @@ export const getHabitLogs = (id) => API.get(`/habits/${id}/logs`);
 export const getProgressSummary = () => API.get("/progress/summary");
 export const sendCoachMessage = (message) => API.post("/coach/message", { message });
 export const getCoachHistory = () => API.get("/coach/history");
-
-// Admin
 export const getAdminStats = () => API.get("/admin/stats");
 export const getAdminUsers = () => API.get("/admin/users");
 export const deleteAdminUser = (id) => API.delete(`/admin/users/${id}`);
