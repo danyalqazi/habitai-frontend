@@ -16,11 +16,12 @@ export default function Coach() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
- const [historyLoaded, setHistoryLoaded] = useState(false); // eslint-disable-line
+const [historyLoaded, setHistoryLoaded] = useState(false); // eslint-disable-line
   const bottomRef = useRef(null);
 
-  useEffect(() => {
+ useEffect(() => {
     loadHistory();
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {

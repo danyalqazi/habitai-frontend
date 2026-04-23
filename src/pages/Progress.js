@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip,
   ResponsiveContainer, LineChart, Line,
-  CartesianGrid, Legend,
+  CartesianGrid,
 } from "recharts";
 import { getProgressSummary } from "../utils/api";
 import { calculateStreak, getLast30Days } from "../utils/streaks";
